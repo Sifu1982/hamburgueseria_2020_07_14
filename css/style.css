@@ -1,0 +1,411 @@
+@import url(reset.css);
+/**Importamos reset**/
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+/*Traemos las fuentes de Google*/
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+/*cdn de fontawesome 5.13.1_Importar el css*/
+
+/*Vamos a usar:
+handlee y montserrat 400 y 700*/
+
+/*Estas son las reglas para usar las fuentes: 
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    /*Chrome*/
+    -webkit-box-sizing: border-box;
+    /*Safari*/
+    -o-box-sizing: border-box;
+    /*opera*/
+    -moz-box-sizing: border-box;
+    /*mozilla*/
+    -ms-box-sizing: border-box;
+    /*microsoft*/
+}
+
+/*Creamos variables globales, es necesario :root  y  --  */
+
+:root {
+    --color-principal: #fa573a;
+    --color-secundario: #21242e;
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundario: 'Handlee', cursive;
+    --anchoMaximo: 1100px;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    /*Así se usa la variable creada*/
+    font-size: 1em;
+}
+
+/*Buenas prácticas*/
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Clase container*/
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* inicio header */
+
+header .nav_top {
+    /*atención al espacio entre header y .nav_top. Quiere decir que dentro de header cualquier elemento con clase nav-top. No es lo mismo que header.nav_top (sin espacio), que sería el header cuya clase fuera nav_top*/
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+}
+
+header .nav_top a {
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+header .nav_top a span {
+    display: none;
+}
+
+header .nav_top .flex {
+    justify-content: space-between;
+    /*Reparte el espacio entre los iconos*/
+}
+
+header .nav_top i {
+    color: var(--color-principal);
+}
+
+header nav {
+    padding: 20px;
+}
+
+header .logo {
+    max-width: 110px;
+}
+
+header .hamburguesa {
+    cursor: pointer;
+    width: 50px;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin: 10px;
+    width: 50px;
+}
+
+header nav .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav ul {
+    width: 100%;
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    color: #aaa;
+    transition: 1s;
+}
+
+header nav ul li .activo {
+    color: var(--color-principal);
+}
+
+header nav ul li a:hover {
+    color: var(--color-principal);
+}
+
+/* fin header */
+
+/* inicio footer */
+
+footer {
+    background-color: var(--color-secundario);
+    padding: 1.250em 0.625em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p, footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* fin footer */
+
+/* media queries desde mobile a desktop */
+
+@media(min-width: 48.000em) {
+    header .nav_top a span {
+        display: inline;
+    }
+    footer {
+        text-align: left;
+    }
+}
+
+@media(min-width: 62.750em) {
+    header .hamburguesa {
+        display: none;
+    }
+    header nav ul {
+        width: auto;
+        display: flex;
+    }
+    header nav ul li a {
+        padding: 5px 20px;
+        border-bottom: 0px;
+    }
+}
+
+/* inicio hero*/
+
+.hero {
+    background-image: url('../images/fondo.jpg');
+    height: 70vh;
+    background-repeat: no-repeat;
+    /*La imagen no es lo suficientemente grande entonces uso cover*/
+    background-size: cover;
+    /*Con esto hago que toda la imagen se vea en toda la pantalla (cover=toda)*/
+    background-position: center center;
+    background-color: #777777;
+    background-blend-mode: multiply;
+    /*background-blend-mode Une las distintas capas que hay en el hero*/
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    width: 80%;
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundario);
+    font-size: 2.5em;
+    color: white;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.50em;
+    margin: 1em 0;
+}
+
+.hero p {
+    font-size: 1.15em;
+    color: white;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal);
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.boton i {
+    transition: transform 0.5s;
+    /*Transition se aplica a transform durante 0.5 segundos*/
+}
+
+.boton:hover i {
+    transform: translateX(5px);
+    /*se va a transformar y a trasladar en el eje X 5px**/
+}
+
+.hero .social li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+}
+
+/* fin hero*/
+
+/* main inicio */
+
+/*inicio sección ourservices*/
+
+main {
+    margin-bottom: 90px;
+}
+
+main section {
+    padding: 2.125em 0;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuenteSecundario);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--color-principal)
+}
+
+main section .underline {
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+/*Cambio de eje*/
+
+main section .underline hr {
+    border-color: var(--color-principal);
+    position: absolute;
+    width: 100%;
+    top: -0.063em;
+}
+
+/*Por mobile-desktop, para poder variar el número de cajas apiladas*/
+
+main #ourservices .flex {
+    flex-wrap: wrap;
+    padding: 0 0.825em;
+}
+
+main #ourservices .flex article {
+    width: 100%;
+    padding: 1.825em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main #ourservices .flex article div i {
+    color: var(--color-principal);
+    font-size: 2em;
+    padding: 0.5em;
+    border: 2px solid var(--color-principal);
+}
+
+main #ourservices .flex article div .fa-truck {
+    transform: rotateY(180deg);
+}
+
+main #ourservices .flex article h3 {
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.enlace {
+    text-decoration: none;
+    margin-top: 1em;
+    display: block;
+    color: var(--color-principal);
+}
+
+/*Mediaqueries*/
+
+@media(min-width: 48.000em) {
+    main #ourservices .flex article {
+        width: 50%;
+        padding: 1.825em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom: 1em;
+    }
+    main #ourservices .flex article:last-child {
+        width: 100%;
+    }
+}
+
+@media(min-width: 62.750em) {
+    main #ourservices .flex article {
+        width: 33.33%;
+    }
+    main #ourservices .flex article:last-child {
+        width: 33.33%;
+    }
+}
+
+/* fin seccion our services */
+
+/* inicio seccion about us */
+
+main #aboutus .flex {
+    flex-direction: column;
+}
+
+main #aboutus .flex .columna {
+    padding: .825em;
+}
+
+main #aboutus .flex .columna h3 {
+    font-weight: 700;
+}
+
+main #aboutus .flex .columna h4 {
+    color: var(--color-principal);
+    margin: 1em 0;
+}
+
+main #aboutus .marco {
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
+    transform: rotateZ(0deg)
+}
+
+@media(min-width: 48.000em) {
+    main #aboutus .flex {
+        flex-direction: row;
+    }
+}
+
+/* fin seccion about us*/
+
+/* final main */
