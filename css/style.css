@@ -59,9 +59,13 @@ img {
     margin: 0 auto;
 }
 
+/*Clase flex*/
+
 .flex {
     display: flex;
 }
+
+/*Inicio index.html*/
 
 /* inicio header */
 
@@ -280,7 +284,7 @@ main section h2 {
 }
 
 main section h2 span {
-    color: var(--color-principal)
+    color: var(--color-principal);
 }
 
 main section .underline {
@@ -409,3 +413,34 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 /* fin seccion about us*/
 
 /* final main */
+
+/*Final index.html*/
+
+/*Comienzo menu*/
+
+.fondo_negro {
+    background-color: black;
+    padding: 0 15%;
+}
+
+#titulo_menu {
+    color: white;
+    font-family: var(--fuenteSecundario);
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+#titulo_menu span {
+    color: var(--color-principal);
+}
+
+#titulo_menu .underline {
+    display: flex;
+    width: 80px;
+}
+
+#titulo_menu .underline span {
+    text-align: center;
+    color: white;
+}
