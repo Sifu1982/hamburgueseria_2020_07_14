@@ -425,10 +425,12 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 
 #titulo_menu {
     color: white;
-    font-family: var(--fuenteSecundario);
-    font-size: 2em;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5em;
     font-style: italic;
     text-align: center;
+    height: 200px;
+    padding-bottom: 80px;
 }
 
 #titulo_menu span {
@@ -436,11 +438,120 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover img {
 }
 
 #titulo_menu .underline {
-    display: flex;
     width: 80px;
 }
 
-#titulo_menu .underline span {
-    text-align: center;
+/*Comienzo menu nav */
+
+main nav .flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main nav ul {
+    width: 100%;
+}
+
+main nav ul li a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    padding: 10px;
     color: white;
+    transition: 1s;
+}
+
+main nav ul li .fondo_naranja {
+    background-color: var(--color-principal);
+}
+
+main nav ul li a.fondo_naranja:hover {
+    background-color: black;
+}
+
+main nav ul li a:hover {
+    color: var(--color-principal);
+}
+
+/* Final menu nav */
+
+.todays h2 {
+    color: white;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.todays hr {
+    display: inline-block;
+    border-color: var(--color-principal);
+    width: 80px;
+}
+
+.todays p {
+    color: white;
+    font-family: var(--fuenteSecundario);
+    font-size: 1.25em;
+    padding-top: 10px;
+}
+
+.foto_texto {
+    color: white;
+}
+
+.foto_texto h2 {
+    color: white;
+}
+
+.foto_texto img {
+    width: 100%;
+}
+
+.foto_texto div div {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto_texto div div h2 {
+    display: block;
+    font-size: 1.75em;
+    font-weight: 600;
+    text-align: left;
+    width: 92%;
+}
+
+.foto_texto div div span {
+    display: block;
+    width: 8%;
+    color: var(--color-principal);
+    font-size: 1.75em;
+}
+
+.foto_texto div div p {
+    width: 100%;
+    padding: 20px 0 10px 0;
+}
+
+.foto_texto div div a {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+@media(min-width: 62.750em) {
+    .media {
+        display: flex;
+        flex-direction: row;
+    }
+    .media .foto_texto div {
+        display: flex;
+        flex-direction: row;
+        padding-left: 50px;
+        margin-top: -15px;
+    }
+    .media .foto_texto div div {
+        margin-bottom: 15px;
+    }
 }
