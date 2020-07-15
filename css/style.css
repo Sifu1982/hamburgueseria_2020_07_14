@@ -540,6 +540,26 @@ main nav ul li a:hover {
     font-size: 1.25em;
 }
 
+.flecha_arriba {
+    height: 10px;
+    position: relative;
+}
+
+.flecha_arriba a {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-principal);
+    cursor: pointer;
+    padding: 6px;
+    text-align: center;
+    position: absolute;
+    right: -20%;
+}
+
 @media(min-width: 62.750em) {
     .media {
         display: flex;
@@ -554,8 +574,109 @@ main nav ul li a:hover {
     .media .foto_texto div div {
         margin-bottom: 15px;
     }
+    .flecha_arriba {
+        display: none;
+    }
 }
 
 /*Final menu*/
 
 /*Comienzo blog*/
+
+.fondo_blanco {
+    padding: 0 15%;
+}
+
+#titulo_menu_blog {
+    color: black;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5em;
+    font-style: italic;
+    text-align: center;
+    height: 200px;
+    padding-bottom: 80px;
+}
+
+#titulo_menu_blog span {
+    color: var(--color-principal);
+}
+
+#titulo_menu_blog .underline {
+    width: 80px;
+}
+
+.foto_texto2 {
+    color: black;
+}
+
+.foto_texto2 h2 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.foto_texto2 img {
+    width: 100%;
+}
+
+.foto_texto2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+}
+
+.foto_texto2 div {
+    width: 95%;
+}
+
+.foto_texto2 div div {
+    position: relative;
+}
+
+.foto_texto2 div div div {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-principal);
+    color: white;
+    position: absolute;
+    top: 0;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto_texto2 div div:nth-child(2) {
+    padding: 0 5%;
+}
+
+.foto_texto2 div div h2 {
+    display: block;
+    font-size: 1.35em;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.foto_texto2 div div h3 {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.foto_texto2 div div p {
+    padding: 20px 0 10px 0;
+}
+
+.foto_texto2 div div a {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+@media(max-width: 62.750em) {
+    .media2 article:last-child {
+        display: none;
+    }
+}
+
+/*Fin de blog*/
